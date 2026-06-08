@@ -1,12 +1,10 @@
-# Claude 个人介绍网站 — AI 使用说明
+# 侯靖清个人介绍网站 — AI 使用说明
 
 ## 最终网站链接
 
 | 链接 | 说明 |
 |------|------|
 | **https://hhh123hhh14.github.io/my-portfolio-ai/** | GitHub Pages 永久部署（无密码，全球可访问） |
-
-> 备用链接：http://lucent-lokum-2acb72.netlify.app（密码：`My-Drop-Site`）
 
 ---
 
@@ -15,7 +13,9 @@
 本次开发全程使用 **Claude Code**（Anthropic 官方 CLI 工具，模型为 Claude Opus 4.6）完成。
 
 具体使用方式：
-- **代码生成**：所有 HTML/CSS/JS 代码由 Claude 根据需求描述直接生成
+- **需求分析**：Claude 读取侯靖清个人简历（.docx 文件），自动提取关键信息并拆解为网站各板块内容
+- **代码生成**：所有 HTML/CSS/JS 代码由 Claude 根据简历内容直接生成，包括页面结构、样式设计、交互效果
+- **内容改写**：将原 Claude AI 助手的英文介绍网站完整改写为侯靖清的中文个人介绍网站
 - **部署运维**：Netlify 匿名部署、localtunnel 隧道、GitHub CLI 安装与配置均由 Claude 通过命令行完成
 - **调试排查**：部署过程中的网络问题、API 认证问题由 Claude 自主诊断并寻找替代方案
 
@@ -23,24 +23,26 @@
 
 | 阶段 | 工作内容 |
 |------|----------|
-| 需求分析 | 将"制作个人介绍网站"拆解为设计、开发、部署三个子任务 |
-| 页面设计 | 确定暗色主题风格、色彩方案（紫色/青色强调色）、板块结构（Hero/About/Skills/Projects/Contact） |
-| HTML 编写 | 生成完整的语义化页面结构，包含导航、五个内容板块、页脚 |
+| 简历解析 | 从 .docx 文件中提取侯靖清的个人信息、教育背景、实习经历、项目经历、技能证书等全部内容 |
+| 内容重构 | 将提取的简历信息映射到网站的五个板块：Hero（个人信息）、About（教育背景+自我评价）、Skills（四大技能分类）、Projects（项目+实习经历）、Contact（联系方式） |
+| 页面设计 | 保留暗色主题风格、紫色/青色强调色、毛玻璃导航、终端模拟器等设计元素 |
+| HTML 编写 | 生成完整的语义化中文页面结构，包含导航、五个内容板块、页脚 |
 | CSS 编写 | 暗色背景 + 渐变装饰、自定义光标、毛玻璃导航、终端模拟器、卡片悬停效果、滚动动画等 |
 | JS 编写 | 自定义光标跟踪、计数器动画、Intersection Observer 滚动显示、终端打字动画循环、视差效果、表单提交处理 |
-| 资源选择 | 选用 Google Fonts（Inter + JetBrains Mono）作为字体方案 |
+| 中文化 | 将所有界面文案、表单提示、Toast 消息、控制台输出从英文转换为中文 |
 | 版本管理 | Git 初始化、文件暂存、提交 |
 | 部署尝试 | Netlify 匿名部署（成功）、Netlify CLI 安装与授权票证流程、GitHub CLI 下载安装与设备授权流程、localtunnel 隧道、Vercel 设备授权流程 |
 | 问题诊断 | 分析 GitHub API 返回 404 的原因（client_id 限制）、Netlify 匿名部署密码保护机制、中国网络环境对 GitHub/Cloudflare 的访问限制 |
 
 ## 3. 自己手动修改了哪些内容
 
-本次为纯 AI 驱动开发，人工操作仅限于 Claude Code 发起的授权请求：
+本次为 AI 驱动开发，人工操作仅限于 Claude Code 发起的授权请求：
 
-- **GitHub 设备授权**：Claude 发起 `gh auth login` 后，需要人工在浏览器中访问 `https://github.com/login/device` 并输入授权码（尚未完成）
-- **Netlify 授权**：Claude 发起 Netlify 登录票证后，需要人工在浏览器中访问授权链接确认（尚未完成）
+- **GitHub 设备授权**：Claude 发起 `gh auth login` 后，需要人工在浏览器中访问 `https://github.com/login/device` 并输入授权码
+- **GitHub Token 提供**：手动创建 GitHub Personal Access Token 并提供给 Claude 用于认证
+- **GitHub Pages 设置**：在 GitHub 仓库设置中手动启用 Pages 功能
 
-除此之外，HTML、CSS、JS 的所有代码内容均由 Claude 生成，未进行人工修改。代码结构清晰、语义化良好、可直接运行。
+除此之外，HTML、CSS、JS 的所有代码内容均由 Claude 生成，简历内容由 Claude 自动解析并填入。代码结构清晰、语义化良好、可直接运行。
 
 ## 4. 遇到的问题，以及如何通过 AI 解决
 
@@ -77,20 +79,24 @@
 
 **解决**：优先使用 Netlify（在中国有 CDN 节点）作为部署目标，并通过多次重试和不同时间点的测试来验证服务可用性。
 
-### 问题 5：匿名部署的密码保护
+### 问题 5：.docx 简历文件读取
+
+**现象**：简历文件为 .docx 二进制格式，无法直接读取。
+
+**解决**：Claude 使用 unzip + sed 命令解压 .docx 文件并提取 word/document.xml 中的文本内容，成功解析侯靖清的全部简历信息。
+
+### 问题 6：匿名部署的密码保护
 
 **现象**：Netlify 匿名部署自动添加 HTTP Basic Auth 密码保护，访问者需要输入密码才能查看网站。
 
 **诊断**：Claude 通过读取 Netlify CLI 文档和实际测试确认，匿名部署的密码保护是 Netlify 的安全设计，无法通过配置去除。
 
-**解决**：
-- 短期方案：提供密码 `My-Drop-Site`，用户可正常访问
-- 长期方案：Claude 发起 Netlify 登录票证（ticket-based auth）和 GitHub 设备授权，等待用户完成浏览器授权后部署到无密码的正式站点
+**解决**：最终通过 GitHub Pages 永久部署，无需密码即可访问。
 
 ## 5. 技术栈
 
 - **前端**：HTML5 + CSS3 + Vanilla JavaScript（无框架，零依赖）
 - **字体**：Google Fonts（Inter、JetBrains Mono）
-- **部署**：Netlify（静态托管）
+- **部署**：GitHub Pages（静态托管）
 - **开发工具**：Claude Code（AI 驱动开发）
 - **版本管理**：Git

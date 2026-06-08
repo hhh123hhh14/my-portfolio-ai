@@ -111,12 +111,12 @@ contactForm.addEventListener('submit', function(e) {
   const originalText = submitBtn.innerHTML;
 
   // Loading state
-  submitBtn.innerHTML = 'Sending...';
+  submitBtn.innerHTML = '发送中...';
   submitBtn.disabled = true;
 
   // Simulate submission
   setTimeout(() => {
-    showToast('Message sent successfully! Thanks for reaching out.');
+    showToast('消息已发送！感谢您的联系。');
     submitBtn.innerHTML = originalText;
     submitBtn.disabled = false;
     contactForm.reset();
@@ -147,11 +147,11 @@ function showToast(message) {
 const typingLine = document.querySelector('.terminal-line.typing');
 if (typingLine) {
   const phrases = [
-    'building the future...',
-    'analyzing codebases...',
-    'deploying to production...',
-    'optimizing performance...',
-    'solving problems...'
+    '持续学习中...',
+    '探索 AI Agent 应用...',
+    '编写高质量代码...',
+    '深入研究技术...',
+    '期待新的挑战...'
   ];
   let phraseIndex = 0;
 
@@ -180,7 +180,7 @@ window.addEventListener('mousemove', (e) => {
   });
 });
 
-console.log('%c Claude Portfolio %c Ready ',
+console.log('%c 侯靖清 %c Portfolio ',
   'background:#6c5ce7;color:white;padding:4px 8px;border-radius:4px 0 0 4px;font-weight:bold;',
   'background:#00d4aa;color:black;padding:4px 8px;border-radius:0 4px 4px 0;font-weight:bold;'
 );
