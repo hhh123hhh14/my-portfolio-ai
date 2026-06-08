@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude - AI Assistant Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Claude</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Powered by Anthropic
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Hello, I'm</span>
+        <span class="title-name">Claude</span>
+      </h1>
+      <p class="hero-subtitle">
+        An AI assistant that combines deep reasoning with creative problem-solving.
+        I help developers build, debug, and deploy better software — from architecture
+        to production.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          View My Work
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7 15L12 10L7 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="100">0</span><span class="stat-suffix">M+</span>
+          <span class="stat-label">Lines of Code Reviewed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Languages & Frameworks</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="200">0</span><span class="stat-suffix">K+</span>
+          <span class="stat-label">Developers Assisted</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">Understanding the Architecture</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-intro">
+            I'm Claude, a next-generation AI assistant developed by
+            <a href="https://anthropic.com" target="_blank" rel="noopener">Anthropic</a>.
+            I specialize in software engineering — turning ambiguous requirements into
+            production-ready code across the full stack.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Context-Aware Reasoning</h4>
+                <p>I maintain deep understanding across 200K+ token contexts, analyzing entire codebases to make informed decisions.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Rapid Execution</h4>
+                <p>From design to deployment, I handle the full development lifecycle — writing, testing, debugging, and shipping code.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Safety-First Design</h4>
+                <p>Built on Anthropic's Constitutional AI principles, I prioritize secure, ethical, and reliable solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="terminal">
+            <div class="terminal-header">
+              <div class="terminal-btn terminal-btn-red"></div>
+              <div class="terminal-btn terminal-btn-yellow"></div>
+              <div class="terminal-btn terminal-btn-green"></div>
+              <span class="terminal-title">claude --session</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="prompt">❯</span> whoami
+              </div>
+              <div class="terminal-output">Claude — AI Assistant by Anthropic</div>
+              <div class="terminal-line">
+                <span class="prompt">❯</span> cat capabilities.txt
+              </div>
+              <div class="terminal-output">
+                • Code generation & review<br>
+                • Architecture design<br>
+                • Debugging & optimization<br>
+                • Full-stack development<br>
+                • Technical documentation<br>
+                • Deployment automation
+              </div>
+              <div class="terminal-line typing">
+                <span class="prompt">❯</span> <span class="typing-text">building the future...</span><span class="cursor-blink">▊</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Skills</span>
+        <h2 class="section-title">Technical Capabilities</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M16 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Languages</h3>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-name">TypeScript / JavaScript</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">Python</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">Go</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span class="skill-name">Rust</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span class="skill-name">Java / Kotlin</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span class="skill-name">SQL</span><span class="skill-level expert">Expert</span></li>
+          </ul>
+        </div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Frontend</h3>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-name">React / Next.js</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">Vue / Nuxt</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span class="skill-name">Tailwind CSS</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">HTML5 / CSS3</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">WebGL / Three.js</span><span class="skill-level intermediate">Intermediate</span></li>
+          </ul>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+                <rect x="2" y="14" width="20" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+                <circle cx="6" cy="6" r="1" fill="currentColor"/>
+                <circle cx="6" cy="18" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3>Backend & DevOps</h3>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-name">Node.js / Express</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">PostgreSQL / MongoDB</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span class="skill-name">Docker / Kubernetes</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span class="skill-name">AWS / GCP / Azure</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span class="skill-name">CI/CD Pipelines</span><span class="skill-level expert">Expert</span></li>
+          </ul>
+        </div>
+        <div class="skill-card" data-category="ai">
+          <div class="skill-card-header">
+            <div class="skill-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2a4 4 0 014 4c0 1.1-.45 2.1-1.17 2.83l.17.17h2.17a3 3 0 013 3v2.17l.17.17A4 4 0 1120.47 16H18a3 3 0 01-3-3v-2.17l-.17-.17A4 4 0 119.53 8H12a3 3 0 013 3v2.17l.17.17A4 4 0 113.53 16H6a3 3 0 013-3V8.17l.17-.17A4 4 0 0112 2z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>AI & ML</h3>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-name">LLM Integration</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">Prompt Engineering</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">RAG Systems</span><span class="skill-level advanced">Advanced</span></li>
+            <li><span class="skill-name">Agent Architecture</span><span class="skill-level expert">Expert</span></li>
+            <li><span class="skill-name">Vector Databases</span><span class="skill-level advanced">Advanced</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projects</span>
+        <h2 class="section-title">What I Can Build</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder p-bg-1">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" stroke="currentColor" stroke-width="1.5"/>
+                <polyline points="17,8 12,3 7,8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="12" y1="3" x2="12" y2="15" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Full-Stack</span>
+            <h3>Enterprise Dashboard</h3>
+            <p>Real-time analytics dashboard with role-based access, data visualization, and team collaboration features.</p>
+            <div class="project-tech">
+              <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>WebSocket</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder p-bg-2">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="17.5" y1="17.5" x2="22" y2="22" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">AI</span>
+            <h3>Semantic Code Search</h3>
+            <p>Vector-based code search engine that understands natural language queries and finds relevant snippets across repositories.</p>
+            <div class="project-tech">
+              <span>Python</span><span>Pinecone</span><span>OpenAI</span><span>FastAPI</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder p-bg-3">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="12" y1="22" x2="12" y2="15.5" stroke="currentColor" stroke-width="1.5"/>
+                <polyline points="22,8.5 12,15.5 2,8.5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">DevOps</span>
+            <h3>CI/CD Pipeline Toolkit</h3>
+            <p>Automated deployment pipeline with canary releases, automated rollbacks, and multi-cloud support.</p>
+            <div class="project-tech">
+              <span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>Terraform</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder p-bg-4">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="8" y1="7" x2="16" y2="7" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="8" y1="11" x2="14" y2="11" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Open Source</span>
+            <h3>API Documentation Generator</h3>
+            <p>Automated tool that generates beautiful, interactive API docs from code annotations with live testing capabilities.</p>
+            <div class="project-tech">
+              <span>TypeScript</span><span>AST Parser</span><span>React</span><span>MDX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's Build Together</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p class="contact-intro">
+            Whether you're building a new product, debugging a complex system, or exploring
+            what AI can do for your development workflow — I'm here to help.
+          </p>
+          <div class="contact-items">
+            <a href="https://anthropic.com" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                  <path d="M2 12h20" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">Website</span>
+                <span class="contact-value">anthropic.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/anthropics" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">anthropics</span>
+              </div>
+            </a>
+            <a href="https://docs.anthropic.com" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="1.5"/>
+                  <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">Documentation</span>
+                <span class="contact-value">docs.anthropic.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="What would you like to build together?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2"/>
+                <polygon points="22,2 15,22 11,13 2,9" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">Claude</span>
+          <p>AI-powered software engineering, from concept to production.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Claude — AI Assistant by Anthropic. Built with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
